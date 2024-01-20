@@ -6,7 +6,7 @@
             "id": "a7c0e1c4-36f3-4c39-9061-835350a3811a",
             "actions": [
                 {
-                    "name": "Movement",
+                    "name": "MovementDirection",
                     "type": "Value",
                     "id": "b00844d1-c5d8-4d0b-86c1-b97493f9061b",
                     "expectedControlType": "Vector2",
@@ -15,13 +15,31 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Camera",
+                    "name": "MouseDelta",
                     "type": "Value",
                     "id": "07c2c0b1-0879-4508-90c1-5503c59b90aa",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "f4431ed4-f6cd-4e4a-a95e-539a09b1bf9f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "1937fa76-8915-4930-a6a4-548d289ca1e2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -32,7 +50,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "MovementDirection",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -43,7 +61,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PCScheme",
-                    "action": "Movement",
+                    "action": "MovementDirection",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -54,7 +72,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PCScheme",
-                    "action": "Movement",
+                    "action": "MovementDirection",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -65,7 +83,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PCScheme",
-                    "action": "Movement",
+                    "action": "MovementDirection",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -76,7 +94,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PCScheme",
-                    "action": "Movement",
+                    "action": "MovementDirection",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -87,7 +105,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PCScheme",
-                    "action": "Camera",
+                    "action": "MouseDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7eb1343b-83a9-4033-a3f4-4efeb4b6d46a",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3ba00c1a-ddf7-4f6f-b182-27d072eceecf",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
