@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// This class provides Singleton pattern implementation for MonoBehaviour-derived classes.
@@ -6,7 +7,7 @@
 /// It may be useful for classes that provide some sort of global state for your application.
 /// For instance, you may have a game manager class that handles high-level game state.
 /// </summary>
-public class Singleton<T> : MonoBehaviour where T : Component {
+public class PersistentLazySingleton<T> : MonoBehaviour where T : Component {
 
 	// Singleton instance (null if not set)
 	private static T instance;
@@ -48,6 +49,27 @@ public class Singleton<T> : MonoBehaviour where T : Component {
 		if (instance == null) {
 			instance = this as T;
 			DontDestroyOnLoad(gameObject);
+		}
+		else {
+			Destroy(gameObject);
+		}
+	}
+}
+
+/// <summary>
+/// This class provides Singleton pattern implementation for MonoBehaviour-derived classes.
+/// The Singleton pattern is a design pattern that restricts a class to a single instance.
+/// It may be useful for classes that provide some sort of global state for your application.
+/// For instance, you may have a game manager class that handles high-level game state.
+/// </summary>
+public class Singleton<T> : MonoBehaviour where T : Component {
+
+	// Singleton instance (null if not set)
+	public static T Instance;
+
+	public virtual void Awake() {
+		if (Instance == null) {
+			Instance = this as T;
 		}
 		else {
 			Destroy(gameObject);

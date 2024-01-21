@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : Singleton<InputManager> {
+public class InputManager : PersistentLazySingleton<InputManager> {
 	private CustomInputActions inputActions;
 
 	public override void Awake() {

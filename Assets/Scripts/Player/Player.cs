@@ -34,12 +34,6 @@ public class Player : MonoBehaviour {
 		HandleMovement();
 		HandleRotation();
 		HandleJumping();
-		HandlePhysics();
-
-	}
-
-	private void HandlePhysics() {
-
 	}
 
 	private void HandleInput() {
@@ -49,7 +43,6 @@ public class Player : MonoBehaviour {
 		_isSprinting = InputManager.Instance.IsSprinting();
 
 		_mouseDelta = InputManager.Instance.GetMouseDelta();
-
 	}
 
 	private void HandleMovement() {
